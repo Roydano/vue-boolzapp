@@ -38,3 +38,48 @@ body{
     width: 60%;
     background-color: lime;
 }
+
+/* NAV BAR */
+.header_nav{
+    min-height: 80px;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+/* SEZIONE COLONNA DI SINISTRA */
+
+
+/* NOTIFICHE */
+.notifications{
+    height: 100px;
+    min-height: 80px;
+    width: 100%;
+    background-color: #8edafc;
+}
+
+/* BARRA DI RICERCA */
+.search_box{
+    margin: 5px;
+    border: 1px solid lightgray;
+    background-color: #fafafa;
+}
+.search_bar{
+    background-color: white;
+    display: flex;
+}
+
+.search_bar i{
+    font-size: 16px;
+    padding: 10px 15px;
+    color: lightgray;
+}
+
+.search_bar input{
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid lightgray;
+    opacity: 0.3;
+}
+
+
+/* CONTATTI */
