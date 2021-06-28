@@ -30,6 +30,7 @@ body{
 .left_side{
     height: 100%;
     width: 40%;
+    min-width: 420px;
     background-color: red;
 }
 
