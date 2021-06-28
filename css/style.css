@@ -83,3 +83,13 @@ body{
 
 
 /* CONTATTI */
+
+.contacts_container{
+    overflow-y: scroll;
+    height: calc(100% - 230px);
+}
+
+.contacts{
+    height: 100px;
+    background-color: lightsalmon;
+}
