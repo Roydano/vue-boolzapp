@@ -93,4 +93,24 @@ body{
 .contacts{
     height: 100px;
     background-color: lightsalmon;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+
+}
+
+.avatar{
+    height: 100px;
+    width: 100px;
+    margin-left: 15px;
+}
+
+.avatar img{
+    height: 100%;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.contacts h1{
+    padding: 10px;
 }
