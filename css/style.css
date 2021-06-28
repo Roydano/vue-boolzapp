@@ -33,6 +33,7 @@ body{
     background-color: #ffffff;
     min-width: 420px;
     border-right: 1px solid lightgrey;
+    overflow: hidden;
 }
 
 
@@ -204,7 +205,7 @@ body{
 .sms_bar{
     background-color: #f3eeea;
     text-align: center;
-    line-height: 70px;
+    line-height: 90px;
 }
 
 .sms_bar input{
@@ -221,3 +222,7 @@ body{
     margin: 10px;
     color: grey;
 }
+
+
+
+/* BOX INVIO E RICEZIONE MESSAGGI */
