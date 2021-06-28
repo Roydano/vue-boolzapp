@@ -32,6 +32,7 @@ body{
     width: 40%;
     min-width: 420px;
     background-color: red;
+    border-right: 1px solid lightgrey;
 }
 
 .right_side{
@@ -41,8 +42,9 @@ body{
 }
 
 /* NAV BAR */
-.header_nav{
-    min-height: 80px;
+.header_nav,
+.sms_bar{
+    min-height: 70px;
     width: 100%;
     background-color: #eaeaea;
 }
@@ -52,7 +54,7 @@ body{
 
 /* NOTIFICHE */
 .notifications{
-    height: 100px;
+    height: 90px;
     min-height: 80px;
     width: 100%;
     background-color: #8edafc;
@@ -87,7 +89,7 @@ body{
 
 .contacts_container{
     overflow-y: scroll;
-    height: calc(100% - 230px);
+    height: calc(100% - 210px);
 }
 
 .contacts{
@@ -113,4 +115,45 @@ body{
 
 .contacts h1{
     padding: 10px;
+}
+
+
+
+
+/* SEZIONE COLONNA DI DESTRA */
+
+
+.right_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.box_sms{
+    height: calc(100% - 140px);
+    background-color: yellow;
+    overflow-y: scroll;
+
+}
+
+.sms_bar{
+    background-color: #f3eeea;
+    text-align: center;
+    line-height: 70px;
+}
+
+.sms_bar input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    opacity: 0.3;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.sms_bar i{
+    font-size: 20px;
+    margin: 10px;
+    color: grey;
 }
