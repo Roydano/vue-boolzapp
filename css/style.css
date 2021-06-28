@@ -30,24 +30,60 @@ body{
 .left_side{
     height: 100%;
     width: 40%;
+    background-color: #ffffff;
     min-width: 420px;
-    background-color: red;
     border-right: 1px solid lightgrey;
 }
+
 
 .right_side{
     height: 100%;
     width: 60%;
-    background-color: lime;
 }
 
 /* NAV BAR */
+
 .header_nav,
 .sms_bar{
     min-height: 70px;
     width: 100%;
     background-color: #eaeaea;
 }
+
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_nav .left{
+    display: flex;
+    align-items: center;
+}
+
+.avatar_header{
+    height: 70px;
+    width: 70px;
+    margin-left: 15px;
+}
+
+.avatar_header img{
+    height: 100%;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.header_nav .right{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header_nav .right i{
+    padding: 8px;
+    font-size: 20px;
+    color: #b1b1b1;
+}
+
 
 /* SEZIONE COLONNA DI SINISTRA */
 
@@ -58,12 +94,41 @@ body{
     min-height: 80px;
     width: 100%;
     background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+
+.notifications .bell_container{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.bell_container i{
+    color: #8edafc;
+    font-size: 20px
+}
+
+.text_notification p{
+    font-weight: 600;
+}
+
+
+
+.text_notification a{
+    font-size: 16px;
+    color: #4f7485;
 }
 
 /* BARRA DI RICERCA */
 .search_box{
     margin: 5px;
-    border: 1px solid lightgray;
+    border: 1px solid rgba(211, 211, 211, 0.3);
     background-color: #fafafa;
 }
 .search_bar{
@@ -74,7 +139,7 @@ body{
 .search_bar i{
     font-size: 16px;
     padding: 10px 15px;
-    color: lightgray;
+    color: #b6b9bb;
 }
 
 .search_bar input{
@@ -94,9 +159,8 @@ body{
 
 .contacts{
     height: 100px;
-    background-color: lightsalmon;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid rgba(211, 211, 211, 0.3);
+    border-bottom: 1px solid rgba(211, 211, 211, 0.3);
     display: flex;
 
 }
@@ -132,7 +196,7 @@ body{
 
 .box_sms{
     height: calc(100% - 140px);
-    background-color: yellow;
+    background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 
 }
