@@ -113,8 +113,8 @@
 
                 <!-- inizio box messaggi -->
                 <div class="box_sms">
-                    <div class="chat clearfix">
-                        <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent' : 'bg_sms_received'" class="message">
+                    <div class="chat">
+                        <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent clearfix' : 'bg_sms_received clearfix'" class="message">
 
                             <p class="text_sms">{{sms.text}}</p>
                             <p class="data">{{sms.date}}</p>
