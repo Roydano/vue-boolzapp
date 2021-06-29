@@ -202,7 +202,6 @@ body{
 .box_sms{
     height: calc(100% - 140px);
     background-image: url(../img/mine.jpg);
-    overflow-y: scroll;
 
 }
 
@@ -232,15 +231,24 @@ body{
 /* BOX INVIO E RICEZIONE MESSAGGI */
 
 .bg_sms_sent{
-    color: #dcf8c7;
+    background-color: #dcf8c7;
+    margin: 0 15px;
+    border-radius: 5px;
+
 }
 
 .bg_sms_received{
-color: #f6f3f0;
+    background-color: #f6f3f0;
+    margin: 0 15px;
+    border-radius: 5px;
 }
 
-.box_sms{
+.chat{
     padding: 20px 0;
+    height: 100%;
+    overflow-y: scroll;
+
+
 }
 
 .message{
@@ -250,4 +258,10 @@ color: #f6f3f0;
 
 .sent{
     text-align: end;
+}
+
+.message .data{
+    font-size: 12px;
+    margin-top: 5px;
+    color: gray;
 }

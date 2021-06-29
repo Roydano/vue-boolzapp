@@ -113,7 +113,14 @@
 
                 <!-- inizio box messaggi -->
                 <div class="box_sms">
-                    <div class="message"></div>
+                    <div class="chat">
+                        <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent' : 'bg_sms_received'" class="message">
+
+                            <p class="text_sms">{{sms.text}}</p>
+                            <p class="data">{{sms.date}}</p>
+                            
+                        </div>
+                    </div>
                 </div>
                 <!-- fine box messaggi -->
 

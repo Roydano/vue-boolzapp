@@ -42,20 +42,160 @@ const app = new Vue({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        text: 'Hai portato a spasso il cane?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
                     },
 
                     {
                         date: '10/01/2020 15:50:00',
-                        text: 'Ricordati di dargli da mangiare',
+                        text: 'Bene grazie! Stasera ci vediamo?',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Diego',
+                avatar: 'img/avatar_3.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '15/01/2020 15:30:55',
+                        text: 'Weeeeee Dieghito come stai?',
+                        status: 'sent'
+                    },
+
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Bene grazie! Tu?',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Non troppo entusiasmo!! XD',
                         status: 'sent'
                     },
 
                     {
                         date: '10/01/2020 16:15:22',
-                        text: 'Tutto fatto!',
+                        text: 'Cmq volevo chiederti se volevi venire con noi al mare!',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Luigi',
+                avatar: 'img/avatar_4.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Stasera...campetto?',
+                        status: 'sent'
+                    },
+
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Ora?',
                         status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: '21',
+                        status: 'sent'
+                    },
+
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Andata',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Gabriele',
+                avatar: 'img/avatar_5.jpg',
+                visible: true,
+                messages: [
+
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Ohi',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Ci sei?',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Rispondi!',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Daii!',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Ohhhhhhhhhhhhhhhhhh',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Loredana',
+                avatar: 'img/avatar_6.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Allora?',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Usciamo o no una di queste sere?',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Carlo',
+                avatar: 'img/avatar_8.jpg',
+                visible: true,
+                messages: [
+                    
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Ho bisogno di te! Ci sei??!',
+                        status: 'received'
+                    },
+
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: 'Come tutti! Certo dimmi pure',
+                        status: 'sent'
                     }
                 ],
             },
