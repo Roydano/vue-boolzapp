@@ -28,14 +28,18 @@
 
         <div class="container">
 
+            <!-- INIZIO COLONNA DI SINISTRA -->
+
             <div class="left_side">
+
+                <!-- inizio header -->
                 <div class="header_nav">
                     <div class="left">
                         <div class="avatar_header">
                             <img src="img/dano.jpg" alt="avatar_1">
                         </div>
                         <div class="nome">
-                            <h4>Nome Utente</h4>
+                            <h4>Danilo D'Alessandro</h4>
                         </div>
                     </div>
                     <div class="right">
@@ -44,7 +48,9 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
+                <!-- fine header -->
 
+                <!-- iniizo sezione notifiche -->
                 <div class="notifications">
                     <div class="bell_container">
                         <i class="fas fa-bell-slash"></i>
@@ -54,15 +60,22 @@
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
+                <!-- fine sezione notifiche -->
 
+
+                <!-- inizio barra ricerca -->
                 <div class="search_box">
                     <div class="search_bar">
                         <i class="fas fa-search"></i>
                         <input type="text" class="input_field" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
+                <!-- fine barra ricerca -->
+
+
+                <!-- inizio lista contatti -->
                 <div class="contacts_container">
-                    <div v-for="(contact, index) in contacts" class="contacts" id="contacts">
+                    <div v-for="(contact, index) in contacts" class="contacts" id="contacts" @click="changeContact(index)">
                         <div class="avatar">
                             <img :src="contact.avatar" alt="">
                         </div>
@@ -70,18 +83,24 @@
                             <h4>{{contact.name}}</h4>
                         </div>
                     </div>
-
-                    
                 </div>
+                <!-- fine lista contatti -->
             </div>
+            <!-- FINE COLONNA DI SINISTRA -->
+
+
+             <!-- INIZIO COLONNA DI DESTRA -->
+
             <div class="right_side">
+
+                <!-- inizio header -->
                 <div class="header_nav">
                     <div class="left">
                         <div class="avatar_header">
-                            <img src="img/avatar_1.jpg" alt="avatar_1">
+                            <img :src="contacts[counter].avatar" alt="">
                         </div>
                         <div class="nome">
-                            <h4>Nome Utente</h4>
+                            <h4>{{contacts[counter].name}}</h4>
                         </div>
                     </div>
                     <div class="right">
@@ -90,25 +109,26 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
+                <!-- fine header -->
 
+                <!-- inizio box messaggi -->
                 <div class="box_sms">
-                    <div class="col_sent">
-                    </div>
-                    <div class="col_incoming">
-                    </div>
+                    <div class="message"></div>
                 </div>
+                <!-- fine box messaggi -->
 
+                <!-- inizio barra scrittura sms -->
                 <div class="sms_bar">
                     <i class="far fa-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio">
                     <i class="fas fa-microphone"></i>
                 </div>
+                <!-- fine barra scrittura sms -->
 
             </div>
+            <!-- FINE COLONNA DI DESTRA -->
 
         </div>
-
-
 
 
     </div>

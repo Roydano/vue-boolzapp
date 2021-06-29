@@ -166,6 +166,10 @@ body{
 
 }
 
+.contacts:hover{
+    background-color: lightgray;
+}
+
 .avatar{
     height: 100px;
     width: 100px;
@@ -226,3 +230,24 @@ body{
 
 
 /* BOX INVIO E RICEZIONE MESSAGGI */
+
+.bg_sms_sent{
+    color: #dcf8c7;
+}
+
+.bg_sms_received{
+color: #f6f3f0;
+}
+
+.box_sms{
+    padding: 20px 0;
+}
+
+.message{
+    padding: 10px;
+    margin: 15px;
+}
+
+.sent{
+    text-align: end;
+}
