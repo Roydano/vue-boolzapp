@@ -36,7 +36,7 @@
                 <div class="header_nav">
                     <div class="left">
                         <div class="avatar_header">
-                            <img src="img/dano.jpg" alt="avatar_1">
+                            <img src="img/dano.jpg" alt="dano">
                         </div>
                         <div class="nome">
                             <h4>Danilo D'Alessandro</h4>
@@ -79,12 +79,12 @@
                 <div class="contacts_container">
                     <div v-for="(contact, index) in contacts" v-if="contact.visible" class="contacts" id="contacts" @click="changeContact(index)">
                         <div class="avatar">
-                            <img :src="contact.avatar" alt="">
+                            <img :src="contact.avatar" alt="avatar">
                         </div>
                         <div class="nome">
                             <h4>{{contact.name}}</h4>
                             <span id="last_view" class="view">
-                                <strong>Ultimo accesso</strong>
+                                <strong>Ultimo accesso {{contact.messages[contact.messages.length - 1].date}}<br> {{contact.messages[contact.messages.length - 1].text}}</strong>
                             </span>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="header_nav">
                     <div class="left">
                         <div class="avatar_header">
-                            <img :src="contacts[counter].avatar" alt="">
+                            <img :src="contacts[counter].avatar" alt="avatar">
                         </div>
                         <div class="nome">
                             <h4>{{contacts[counter].name}}</h4>
