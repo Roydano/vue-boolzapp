@@ -222,12 +222,13 @@ const app = new Vue({
             let messageSend = document.getElementById('chat_text').value;
             // console.log(messageSend);
 
-            //? creo una variabile che aggiung il messaggio che andremo a scrivere come oggetto dell'array messages al contatto selezionato
+            //? creo una variabile che aggiunga il messaggio che andremo a scrivere come oggetto dell'array messages al contatto selezionato
 
             let newMessages = this.contacts[this.counter].messages;
             newMessages.push({text: messageSend, status: 'sent'});
-            messageSend = '';
-            document.getElementById('chat_text').value = messageSend;
+            //?in questo modo ogni volta che il messaggio viene pushato la barra si pulisce
+            
+            document.getElementById('chat_text').value = '';
 
             // console.log(newMessages);
             // console.log(newMessages.length);
