@@ -213,7 +213,30 @@ const app = new Vue({
             this.counter = indice;
             console.log(this.counter)
 
-        }
+        },
+
+        sendMsg(){
+
+            //? creo una variabile che vada a prendere il valore che inserisco nella chat bar
+
+            let messageSend = document.getElementById('chat_text').value;
+            // console.log(messageSend);
+
+            //? creo una variabile che aggiung il messaggio che andremo a scrivere come oggetto dell'array messages al contatto selezionato
+
+            let newMessages = this.contacts[this.counter].messages;
+            newMessages.push({text: messageSend, status: 'sent'});
+            messageSend = '';
+            document.getElementById('chat_text').value = messageSend;
+
+            // console.log(newMessages);
+            // console.log(newMessages.length);
+
+            setTimeout(function(){
+                newMessages.push({text: 'ok', status: 'received'})
+            }, 1000);
+            
+        },
 
 
     }

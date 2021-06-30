@@ -127,7 +127,7 @@
                 <!-- inizio barra scrittura sms -->
                 <div class="sms_bar">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" id="chat_text" placeholder="Scrivi un messaggio" @keyup.enter="sendMsg">
                     <i class="fas fa-microphone"></i>
                 </div>
                 <!-- fine barra scrittura sms -->
