@@ -7,6 +7,7 @@ const app = new Vue({
 
     data:{
 
+        filter: '',
         counter: 0,
 
         contacts: [
@@ -242,9 +243,30 @@ const app = new Vue({
             // console.log(newMessages.length);
 
             setTimeout(function(){
-                newMessages.push({text: 'ok', status: 'received'})
+                newMessages.push({text: 'ok', date: app.today(),status: 'received'})
             }, 1000);
             
+        },
+
+
+        //! funzione per filtrare la lista dei contatti
+
+        searchContact(){
+            this.contacts.forEach(element =>{
+
+                let search = element.name.toLowerCase();
+                // console.log(element.name);
+                let filterWord = this.filter.toLowerCase();
+                // console.log(filterWord);
+                let thereIsLetter = search.indexOf(filterWord);
+                // console.log(thereIsLetter);
+                if(thereIsLetter == -1){
+                    element.visible = false;
+                } else{
+                    element.visible = true;
+                }
+                // console.log(element.visible);
+            })
         },
 
 

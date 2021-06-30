@@ -67,7 +67,7 @@
                 <div class="search_box">
                     <div class="search_bar">
                         <i class="fas fa-search"></i>
-                        <input type="text" class="input_field" placeholder="Cerca o inizia una nuova chat">
+                        <input id="search_bar" type="text" class="input_field" placeholder="Cerca o inizia una nuova chat" @keyup="searchContact" v-model="filter">
                     </div>
                 </div>
                 <!-- fine barra ricerca -->
@@ -75,7 +75,7 @@
 
                 <!-- inizio lista contatti -->
                 <div class="contacts_container">
-                    <div v-for="(contact, index) in contacts" class="contacts" id="contacts" @click="changeContact(index)">
+                    <div v-for="(contact, index) in contacts" v-if="contact.visible" class="contacts" id="contacts" @click="changeContact(index)">
                         <div class="avatar">
                             <img :src="contact.avatar" alt="">
                         </div>
