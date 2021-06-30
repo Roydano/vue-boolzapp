@@ -213,7 +213,7 @@ const app = new Vue({
         changeContact(indice){
 
             this.counter = indice;
-            console.log(this.counter)
+            // console.log(this.counter)
 
         },
 
@@ -235,6 +235,8 @@ const app = new Vue({
 
             let newMessages = this.contacts[this.counter].messages;
             newMessages.push({text: messageSend, date: this.today(), status: 'sent'});
+
+            
             //?in questo modo ogni volta che il messaggio viene pushato la barra si pulisce
 
             document.getElementById('chat_text').value = '';
@@ -242,6 +244,8 @@ const app = new Vue({
             // console.log(newMessages);
             // console.log(newMessages.length);
 
+            //?dopo un secondo il un messaggio viene pushato
+            
             setTimeout(function(){
                 newMessages.push({text: 'ok', date: app.today(),status: 'received'})
             }, 1000);
@@ -269,6 +273,13 @@ const app = new Vue({
             })
         },
 
+
+        //!funzione per fare apparire l'ultimo accesso
+
+        lastAccess(){
+            
+        },
+    
 
     }
 

@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+i{
+    cursor: pointer;
+}
+
 
 
 /* BODY */
@@ -186,7 +190,10 @@ body{
     padding: 10px;
 }
 
-
+.view{
+    color: grey;
+    font-size: 15px;
+}
 
 
 /* SEZIONE COLONNA DI DESTRA */
@@ -269,7 +276,8 @@ body{
 }
 
 .message .data{
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 5px;
+    font-weight: 600;
     color: gray;
 }

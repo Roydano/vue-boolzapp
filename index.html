@@ -57,7 +57,9 @@
                     </div>
                     <div class="text_notification">
                         <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
+                        <a href="#">
+                            <strong>Attiva notifiche desktop</strong>
+                        </a>
                     </div>
                 </div>
                 <!-- fine sezione notifiche -->
@@ -81,6 +83,9 @@
                         </div>
                         <div class="nome">
                             <h4>{{contact.name}}</h4>
+                            <span id="last_view" class="view">
+                                <strong>Ultimo accesso</strong>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -101,6 +106,9 @@
                         </div>
                         <div class="nome">
                             <h4>{{contacts[counter].name}}</h4>
+                            <span class="view">
+                                <strong></strong>
+                            </span>
                         </div>
                     </div>
                     <div class="right">
@@ -116,7 +124,7 @@
                     <div class="chat">
                         <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent clearfix' : 'bg_sms_received clearfix'" class="message">
 
-                            <p class="text_sms">{{sms.text}}</p>
+                            <p class="text_sms"><strong>{{sms.text}}</strong></p>
                             <p class="data">{{sms.date}}</p>
                             
                         </div>
