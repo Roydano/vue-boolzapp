@@ -208,6 +208,7 @@ const app = new Vue({
 
     methods:{
 
+        //! funzione per selezionare i contatti in base all'inidice
         changeContact(indice){
 
             this.counter = indice;
@@ -215,6 +216,13 @@ const app = new Vue({
 
         },
 
+        //! Funzione per generare la data e l'ora attuale
+        today(){
+            let now = dayjs();
+            return now.format('DD/MM/YYYY') + ' ' + now.format('HH:mm')
+        },
+
+        //! funzione per mandare e ricevere il messaggio
         sendMsg(){
 
             //? creo una variabile che vada a prendere il valore che inserisco nella chat bar
@@ -225,9 +233,9 @@ const app = new Vue({
             //? creo una variabile che aggiunga il messaggio che andremo a scrivere come oggetto dell'array messages al contatto selezionato
 
             let newMessages = this.contacts[this.counter].messages;
-            newMessages.push({text: messageSend, status: 'sent'});
+            newMessages.push({text: messageSend, date: this.today(), status: 'sent'});
             //?in questo modo ogni volta che il messaggio viene pushato la barra si pulisce
-            
+
             document.getElementById('chat_text').value = '';
 
             // console.log(newMessages);
@@ -249,3 +257,4 @@ const app = new Vue({
 
 
 });
+
