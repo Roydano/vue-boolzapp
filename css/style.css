@@ -15,6 +15,14 @@ ul{
 }
 
 
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 
 /* BODY */
 
@@ -289,6 +297,8 @@ body{
 .message{
     padding: 10px;
     margin: 15px;
+    position: relative;
+
 }
 
 .sent{
@@ -300,4 +310,31 @@ body{
     margin-top: 5px;
     font-weight: 600;
     color: gray;
+}
+
+.delete{
+    position: absolute;
+    text-align: start;
+    width: 130px;
+    right: -3px;
+    top: 24px;
+    background-color: #f3eeea;
+    padding: 10px;
+    box-shadow: 2px 1px 3px 1px grey;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    z-index: 10;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.delete li{
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.delete li:hover{
+    background-color: lightgray;
+    cursor: pointer;
 }

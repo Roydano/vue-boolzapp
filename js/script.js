@@ -273,6 +273,14 @@ const app = new Vue({
             })
         },
 
+        removeMessage(indice){
+            console.log(indice);
+            this.contacts[this.counter].messages.splice(indice, 1);
+        }
+
+
+
+
     
 
     }

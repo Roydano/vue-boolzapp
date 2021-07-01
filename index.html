@@ -83,9 +83,10 @@
                         </div>
                         <div class="nome">
                             <h4>{{contact.name}}</h4>
-                            <span id="last_view" class="view">
+                            <span v-if="contact.messages != '' " id="last_view" class="view">
                                 <strong>Ultimo accesso {{contact.messages[contact.messages.length - 1].date}}<br> {{contact.messages[contact.messages.length - 1].text}}</strong>
                             </span>
+                            <span v-else></span>
                         </div>
                     </div>
                 </div>
@@ -106,9 +107,10 @@
                         </div>
                         <div class="nome">
                             <h4>{{contacts[counter].name}}</h4>
-                            <span class="view">
+                            <span v-if="contacts[counter].messages != '' " class="view">
                                 <strong>Ultimo accesso {{contacts[counter].messages[contacts[counter].messages.length - 1].date}}</strong>
                             </span>
+                            <span v-else></span>
                         </div>
                     </div>
                     <div class="right">
@@ -122,19 +124,22 @@
                 <!-- inizio box messaggi -->
                 <div class="box_sms">
                     <div class="chat">
-                        <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent clearfix' : 'bg_sms_received clearfix'" class="message">
+                        <div v-for="(sms, index) in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent clearfix' : 'bg_sms_received clearfix'" class="message">
                             
                             <div class="sms_row">
                                 <p class="text_sms"><strong>{{sms.text}}</strong></p>
-                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down">
+                                    <ul class="delete">
+                                        <li @click="removeMessage(index)">Delete message</li>
+                                        <li>Info message</li>
+                                    </ul> 
+                                </i>
                             </div>
                             <p class="data">{{sms.date}}</p>
+                            
                         </div>
                         
-                        <!-- <div class="delete">
-                            <p>Delete message</p>
-                            <p>Info message</p>
-                        </div> -->
+                        
 
                         
                     </div>
