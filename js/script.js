@@ -273,12 +273,6 @@ const app = new Vue({
             })
         },
 
-
-        //!funzione per fare apparire l'ultimo accesso
-
-        lastAccess(){
-            
-        },
     
 
     }

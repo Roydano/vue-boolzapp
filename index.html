@@ -107,7 +107,7 @@
                         <div class="nome">
                             <h4>{{contacts[counter].name}}</h4>
                             <span class="view">
-                                <strong></strong>
+                                <strong>Ultimo accesso {{contacts[counter].messages[contacts[counter].messages.length - 1].date}}</strong>
                             </span>
                         </div>
                     </div>
@@ -123,11 +123,20 @@
                 <div class="box_sms">
                     <div class="chat">
                         <div v-for="sms in contacts[counter].messages" :class="sms.status == 'sent' ? 'sent bg_sms_sent clearfix' : 'bg_sms_received clearfix'" class="message">
-
-                            <p class="text_sms"><strong>{{sms.text}}</strong></p>
-                            <p class="data">{{sms.date}}</p>
                             
+                            <div class="sms_row">
+                                <p class="text_sms"><strong>{{sms.text}}</strong></p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <p class="data">{{sms.date}}</p>
                         </div>
+                        
+                        <!-- <div class="delete">
+                            <p>Delete message</p>
+                            <p>Info message</p>
+                        </div> -->
+
+                        
                     </div>
                 </div>
                 <!-- fine box messaggi -->

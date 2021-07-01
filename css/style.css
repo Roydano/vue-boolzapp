@@ -10,6 +10,10 @@ i{
     cursor: pointer;
 }
 
+ul{
+    list-style: none;
+}
+
 
 
 /* BODY */
@@ -266,8 +270,20 @@ body{
     padding: 20px 0;
     height: 100%;
     overflow-y: scroll;
+}
 
+.sms_row{
+    display: flex;
+    justify-content: space-between;
+}
 
+.sms_row i{
+    margin-left: 10px;
+    display: none;
+}
+
+.sms_row:hover i{
+    display: block;
 }
 
 .message{
